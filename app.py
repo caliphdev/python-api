@@ -13,11 +13,13 @@ def home():
 
 @app.route('/api/wikipedia', methods=['GET'])
 def wikipediaa():
+   if request.args.get('query'):
     text = request.args.get('query')
     tulis= wikipedia(text)
     for i in tulis:
         return tulis
-
+    else: 
+   return { 'success': False, 'message': 'Masukkan parameter query' }
 
 @app.route('/api/nulis', methods=['GET','POST'])
 def noolees():
