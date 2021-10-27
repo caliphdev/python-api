@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 import requests, os
 from bs4 import BeautifulSoup as bs
 import json, base64
@@ -8,10 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    a = {
-    'Contoh-Penggunaan':{'nulis': 'api/nulis?text=haii', 'text3d': 'api/text3d?text=halo', 'textmaker1': 'api/textmaker?text=halo', 'textmaker2': 'api/textmaker2?text=halo', 'textmaker3': 'api/textmaker3?text=halo', 'textmaker4': 'api/textmaker4?text=halo'}
-    }
-    return a
+    return redirect("http://github.com/caliph91/textmaker-api", code=302)
 
 @app.route('/api/nulis', methods=['GET','POST'])
 def noolees():
