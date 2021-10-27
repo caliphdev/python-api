@@ -3,7 +3,7 @@ import requests, os
 from bs4 import BeautifulSoup as bs
 import json, base64
 from urllib.parse import *
-# from lib.wiki import * 
+from lib.wiki import * 
 
 app = Flask(__name__)
 
@@ -13,21 +13,10 @@ def home():
 
 @app.route('/api/wikipedia', methods=['GET'])
 def wikipediaa():
-    import wikipedia as wk
-    wk.set_lang("id")
-
-	data = wk.search(request.args.get('query'))
-	if len(data) == 0:
-		return {"sucess": False}
-		
-	data = wk.page(data[0])
-	rv = {
-		"title": data.title,
-		"content": data.content,
-		"success": True,
-	}
-	
-	return rv
+    text = request.args.get('query')
+    tulis= wikipedia(text)
+    for i in tulis:
+        return tulis
 
 
 @app.route('/api/nulis', methods=['GET','POST'])
