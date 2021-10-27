@@ -11,6 +11,11 @@ Apa ? Textpro ? Photooxy ? Bukan dong, ini ApI 100% Buatan Sndiri Tanpa Bantuan 
 
 # Cara Penggunaan
 
+# Nulis 
+```py
+api/text?text=Halo Gais
+```
+
 # TextMaker
 ```py
 api/textmaker?text=Halo Gais
