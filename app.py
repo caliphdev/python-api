@@ -3,7 +3,7 @@ import requests, os
 from bs4 import BeautifulSoup as bs
 import json, base64
 from urllib.parse import *
-from lib.wiki import * as wk
+from lib.wiki import * 
 
 app = Flask(__name__)
 
@@ -12,9 +12,9 @@ def home():
     return redirect("http://github.com/caliph91/textmaker-api", code=302)
 
 @app.route('/api/wikipedia', methods=['GET'])
-def wikipedia():
+def wikipediaa():
     text = request.args.get('query')
-    tulis=wk.wikipedia(text)
+    tulis=wikipedia(text)
         js = {
          "results": tulis
          }
