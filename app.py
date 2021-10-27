@@ -17,7 +17,7 @@ def home():
 def nulis():
     from lib.nulis import tulis
     text = request.args.get('text')
-    tulis=tulis(unquote(request.args.get('text')))
+    tulis= tulis(text)
     for i in tulis.tulis():
         i.save('gambar.jpg')
         image = open('gambar.jpg', 'rb')
