@@ -13,7 +13,7 @@ def home():
 
 @app.route('/api/wikipedia', methods=['GET', 'POST'])
 def wikipedia():
-   if request.args.get('text')
+   if request.args.get('text'):
      wikii = wiki.wikipedia(request.args.get('text'))
      for i in wikii:
      return wikii
