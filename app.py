@@ -3,12 +3,23 @@ import requests, os
 from bs4 import BeautifulSoup as bs
 import json, base64
 from urllib.parse import *
+from lib.wiki import wiki
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     return redirect("http://github.com/caliph91/textmaker-api", code=302)
+
+@app.route('/api/wikipedia', methods=['GET', 'POST'])
+def wikipedia():
+   if request.args.get('text')
+     wikii = wiki.wikipedia(request.args.get('text'))
+     for i in wikii:
+     return wikii
+  else:
+     return { 'success': False, message: 'masukkan parameter text' }
+
 
 @app.route('/api/nulis', methods=['GET','POST'])
 def noolees():
