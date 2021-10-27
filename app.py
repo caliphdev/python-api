@@ -11,19 +11,15 @@ app = Flask(__name__)
 def home():
     return redirect("http://github.com/caliph91/textmaker-api", code=302)
 
-@app.route('/api/wikipedia', methods=['GET', 'POST'])
+@app.route('/api/wikipedia', methods=['GET'])
 def wikipedia():
-   if request.args.get('text'):
-
-     wikii = wiki.wikipedia(request.args.get('text'))
-     for i in wikii:
-     return wikii
-
-  else:
-     return { 
-       'success': False, 
-    message: 'masukkan parameter text' 
-}
+    text = request.args.get('query')
+    tulis=wiki.wikipedia(text)
+    for i in wiki.wikipedia():
+        js = {
+         "results": tulis
+         }
+        return js
 
 
 @app.route('/api/nulis', methods=['GET','POST'])
