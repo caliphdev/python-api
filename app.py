@@ -68,7 +68,7 @@ def makerr():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
@@ -93,7 +93,7 @@ def makerr2():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
@@ -118,7 +118,7 @@ def makerr3():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
@@ -143,7 +143,7 @@ def makerr4():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
@@ -168,7 +168,7 @@ def tigadimensi():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
@@ -193,7 +193,7 @@ def tigadimensi2():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
@@ -218,7 +218,7 @@ def tigadimensi3():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
@@ -243,7 +243,7 @@ def tigadimensi4():
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
         js = {
-         "results":p
+         "result":p
          }
         return js
 
