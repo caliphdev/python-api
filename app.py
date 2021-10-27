@@ -20,14 +20,10 @@ def noolees():
       #  try:
             nulis = tulis(unquote(request.args.get('text')))
             for i in nulis:
-                i.save('resolt.jpg')
-                image = open('resolt.jpg', 'rb')
-        image_read = image.read()
-        image_64_encode = base64.encodebytes(image_read)
-                url = 'https://api.imgbb.com/1/upload'
+          url = 'https://api.imgbb.com/1/upload'
         par = {
          'key':'c93b7d1d3f7a145263d4651c46ba55e4',
-         'image':image_64_encode
+         'image': imageToBase64('resolt.jpg')
          }
         headers = {
          'Accept': 'application/json'
