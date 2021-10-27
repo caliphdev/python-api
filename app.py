@@ -10,11 +10,11 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     a = {
-    'Contoh-Penggunaan':{'text3d': 'api/text3d?text=halo', 'textmaker1': 'api/textmaker?text=halo', 'textmaker2': 'api/textmaker2?text=halo', 'textmaker3': 'api/textmaker3?text=halo', 'textmaker4': 'api/textmaker4?text=halo'}
+    'Contoh-Penggunaan':{'nulis': 'api/nulis?text=haii', 'text3d': 'api/text3d?text=halo', 'textmaker1': 'api/textmaker?text=halo', 'textmaker2': 'api/textmaker2?text=halo', 'textmaker3': 'api/textmaker3?text=halo', 'textmaker4': 'api/textmaker4?text=halo'}
     }
     return a
 
-@app.route('/nulis', methods=['GET','POST'])
+@app.route('/api/nulis', methods=['GET','POST'])
 def noolees():
     if request.args.get('text'):
       #  try:
