@@ -11,8 +11,8 @@ app = Flask(__name__)
 def home():
     return redirect("http://github.com/caliph91/textmaker-api", code=302)
 
-@app.route('/api/nulis', methods=['GET','POST'])
-def noolees():
+@app.route('/api/wikipedia', methods=['GET','POST'])
+def wiki():
     if request.args.get('query'):
             nulis = wikipedia(unquote(request.args.get('query')))
             for i in nulis:
