@@ -2,6 +2,8 @@ from flask import Flask, request
 import requests
 from bs4 import BeautifulSoup as bs
 import json, base64
+from lib.nulis import *
+from urllib.parse import *
 
 app = Flask(__name__)
 
@@ -11,6 +13,42 @@ def home():
     'Contoh-Penggunaan':{'text3d': 'api/text3d?text=halo', 'textmaker1': 'api/textmaker?text=halo', 'textmaker2': 'api/textmaker2?text=halo', 'textmaker3': 'api/textmaker3?text=halo', 'textmaker4': 'api/textmaker4?text=halo'}
     }
     return a
+
+@app.route('/nulis', methods=['GET','POST'])
+def noolees():
+    if request.args.get('text'):
+      #  try:
+            nulis = tulis(unquote(request.args.get('text')))
+            for i in nulis:
+                i.save('resolt.jpg')
+                image = open('resolt.jpg', 'rb')
+        image_read = image.read()
+        image_64_encode = base64.encodebytes(image_read)
+                url = 'https://api.imgbb.com/1/upload'
+        par = {
+         'key':'c93b7d1d3f7a145263d4651c46ba55e4',
+         'image':image_64_encode
+         }
+        headers = {
+         'Accept': 'application/json'
+         }
+        req = requests.post(url,data=par, headers=headers)
+        p = req.json()['data']['display_url']
+        
+            return {
+                'status': 200,
+                'result': p
+            }
+      #  except:
+       #     return {
+         #       'status': False,
+        #        'error': 'Failed writing dude:('
+         #   }
+    else:
+        return {
+            'status': False,
+            'msg': '[!] Masukkan parameter text'
+        }
 
 @app.route('/api/textmaker', methods=['GET'])
 def makerr():
