@@ -16,10 +16,7 @@ def wiki():
     if request.args.get('query'):
             nulis = wikipedia(request.args.get('query'))
             for i in nulis:
-                return {
-                    'status': 200,
-                   'result': nulis
-                }
+                return nulis
     else:
         return {
             'status': False,
