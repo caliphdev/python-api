@@ -20,10 +20,10 @@ def wikipediaa():
         return tulis
 
     else: 
-     return { 
-     'success': False, 
-    'message': 'Masukkan parameter query' 
-    }
+     return {
+            'status': False,
+            'msg': '[!] Masukkan parameter query'
+        }
 
 @app.route('/api/nulis', methods=['GET','POST'])
 def noolees():
