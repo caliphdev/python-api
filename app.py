@@ -15,7 +15,7 @@ def home():
 
 @app.route('/api/nulis', methods=['GET','POST'])
 def noolees():
-    from lib.nulis import *
+    from lib.nulis import tulis, imageToBase64
     if request.args.get('text'):
             nulis = tulis(unquote(request.args.get('text')))
             for i in nulis:
