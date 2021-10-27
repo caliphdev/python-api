@@ -5,6 +5,11 @@
 
 # Cara Penggunaan
 
+# Wikipedia
+```py
+api/Wikipedia?query=google
+```
+
 # Nulis 
 ```py
 api/nulis?text=Halo Gais
