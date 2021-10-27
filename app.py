@@ -14,7 +14,7 @@ def home():
 @app.route('/api/wikipedia', methods=['GET','POST'])
 def wiki():
     if request.args.get('query'):
-            nulis = wikipedia(unquote(request.args.get('query')))
+            nulis = wikipedia(request.args.get('query'))
             for i in nulis:
                 return {
                     'status': 200,
