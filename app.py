@@ -15,7 +15,6 @@ def home():
 def wikipedia():
    if request.args.get('text'):
      wikii = wiki.wikipedia(request.args.get('text'))
-     for i in wikii:
      return wikii
   else:
      return { 'success': False, message: 'masukkan parameter text' }
