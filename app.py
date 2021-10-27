@@ -15,7 +15,7 @@ def home():
 def wikipediaa():
     text = request.args.get('query')
     tulis=wikipedia(text)
-    for i in tulis
+    for i in tulis:
         js = {
          "results": i
          }
