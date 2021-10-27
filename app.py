@@ -14,10 +14,16 @@ def home():
 @app.route('/api/wikipedia', methods=['GET', 'POST'])
 def wikipedia():
    if request.args.get('text'):
+
      wikii = wiki.wikipedia(request.args.get('text'))
+     for i in wikii:
      return wikii
+
   else:
-     return { 'success': False, message: 'masukkan parameter text' }
+     return { 
+       'success': False, 
+    message: 'masukkan parameter text' 
+}
 
 
 @app.route('/api/nulis', methods=['GET','POST'])
