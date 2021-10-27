@@ -3,7 +3,7 @@ import requests, os
 from bs4 import BeautifulSoup as bs
 import json, base64
 from urllib.parse import *
-from lib.wiki as wk
+from lib.wiki import * as wk
 
 app = Flask(__name__)
 
