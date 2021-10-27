@@ -7,7 +7,7 @@ p## ✨ Official Python API
 
 # Nulis 
 ```py
-api/text?text=Halo Gais
+api/nulis?text=Halo Gais
 ```
 
 # TextMaker
