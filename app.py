@@ -13,30 +13,38 @@ def home():
     }
     return a
 
-@app.route('/api/nulis', methods=['GET'])
-def nulis():
-    from lib.nulis import tulis
-    text = request.args.get('text')
-    tulis= tulis(text)
-    for i in tulis.tulis():
-        i.save('gambar.jpg')
-        image = open('gambar.jpg', 'rb')
-        image_read = image.read()
-        image_64_encode = base64.encodebytes(image_read)
-        url = 'https://api.imgbb.com/1/upload'
+@app.route('/nulis', methods=['GET','POST'])
+def noolees():
+    from lib.nulis import *
+    if request.args.get('text'):
+      #  try:
+            nulis = tulis(unquote(request.args.get('text')))
+            for i in nulis:
+                i.save('resolt.jpg')
+            url = 'https://api.imgbb.com/1/upload'
         par = {
          'key':'c93b7d1d3f7a145263d4651c46ba55e4',
-         'image':image_64_encode
+         'image': imageToBase64('resolt.jpg')
          }
         headers = {
          'Accept': 'application/json'
          }
         req = requests.post(url,data=par, headers=headers)
         p = req.json()['data']['display_url']
-        js = {
-         "results":p
-         }
-        return js
+            return {
+                'status': 200,
+                'result': p
+            }
+      #  except:
+       #     return {
+         #       'status': False,
+        #        'error': 'Failed writing dude:('
+         #   }
+    else:
+        return {
+            'status': False,
+            'msg': '[!] Masukkan parameter text'
+        }
 
 
 @app.route('/api/textmaker', methods=['GET'])
