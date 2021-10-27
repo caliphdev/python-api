@@ -16,10 +16,7 @@ def wikipediaa():
     text = request.args.get('query')
     tulis=wikipedia(text)
     for i in tulis:
-        js = {
-         "results": i
-         }
-        return js
+        return tulis
 
 
 @app.route('/api/nulis', methods=['GET','POST'])
