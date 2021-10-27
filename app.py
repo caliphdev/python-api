@@ -18,8 +18,12 @@ def wikipediaa():
     tulis= wikipedia(text)
     for i in tulis:
         return tulis
+
     else: 
-   return { 'success': False, 'message': 'Masukkan parameter query' }
+     return { 
+     'success': False, 
+    'message': 'Masukkan parameter query' 
+    }
 
 @app.route('/api/nulis', methods=['GET','POST'])
 def noolees():
