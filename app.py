@@ -3,7 +3,7 @@ import requests, os
 from bs4 import BeautifulSoup as bs
 import json, base64
 from urllib.parse import *
-from lib.wiki import wiki
+from lib.wiki import wikipedia
 
 app = Flask(__name__)
 
@@ -14,8 +14,8 @@ def home():
 @app.route('/api/wikipedia', methods=['GET'])
 def wikipedia():
     text = request.args.get('query')
-    tulis=wiki.wikipedia(text)
-    for i in wiki.wikipedia():
+    tulis=wikipedia(text)
+    for i in wikipedia():
         js = {
          "results": tulis
          }
