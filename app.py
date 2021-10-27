@@ -1,5 +1,5 @@
 from flask import Flask, request
-import requests
+import requests, os
 from bs4 import BeautifulSoup as bs
 import json, base64
 from lib.nulis import *
@@ -252,4 +252,5 @@ def tigadimensi4():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT','80')),debug=True)
+)
