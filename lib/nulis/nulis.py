@@ -39,4 +39,4 @@ def imageToBase64(fname):
     e.g imageToBase64('result.jpg')
     '''
     with open(fname, 'rb') as file:
-        return 'data:image/jpeg;base64,'+ bs64(file.read()).decode()
+        return bs64(file.read()).decode()
