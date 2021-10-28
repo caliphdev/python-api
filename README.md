@@ -6,47 +6,40 @@
 # Cara Penggunaan
 
 # Wikipedia
-```js
-api/wikipedia?query=google
-```
+
+<a href='https://pythonapis.clph.me/api/wikipedia?query=google'>Try</a>
 
 # Nulis 
-```js
-api/nulis?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/nulis?text=caliph+ganteng+banget'>Try</a>
 
 # TextMaker
-```js
-api/textmaker?text=Halo Gais
-```
+<a href='https://pythonapis.clph.me/api/textmaker?text=caliph+ganteng+banget'>Try</a>
+
 # TextMaker 2
-```js
-api/textmaker2?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/textmaker2?text=caliph+ganteng+banget'>Try</a>
 
 # TextMaker 3
-```js
-api/textmaker3?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/textmaker3?text=caliph+ganteng+banget'>Try</a>
+
 # TextMaker 4
-```js
-api/textmaker4?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/textmaker4?text=caliph+ganteng+banget'>Try</a>
+
 # Text3D
-```js
-api/text3d?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/text3d?text=caliph+ganteng+banget'>Try</a>
+
 # Text3D 2
-```js
-api/text3d-2?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/text3d-2?text=caliph+ganteng+banget'>Try</a>
 
 # Text3D 3
-```js
-api/text3d-3?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/text3d-3?text=caliph+ganteng+banget'>Try</a>
 
 # Text3D 4
-```js
-api/text3d-4?text=Halo Gais
-```
+
+<a href='https://pythonapis.clph.me/api/text3d-4?text=caliph+ganteng+banget'>Try</a>
