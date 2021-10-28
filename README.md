@@ -6,47 +6,47 @@
 # Cara Penggunaan
 
 # Wikipedia
-```py
-api/Wikipedia?query=google
+```js
+api/wikipedia?query=google
 ```
 
 # Nulis 
-```py
+```js
 api/nulis?text=Halo Gais
 ```
 
 # TextMaker
-```py
+```js
 api/textmaker?text=Halo Gais
 ```
 # TextMaker 2
-```py
+```js
 api/textmaker2?text=Halo Gais
 ```
 
 # TextMaker 3
-```py
+```js
 api/textmaker3?text=Halo Gais
 ```
 # TextMaker 4
-```py
+```js
 api/textmaker4?text=Halo Gais
 ```
 # Text3D
-```py
+```js
 api/text3d?text=Halo Gais
 ```
 # Text3D 2
-```py
+```js
 api/text3d-2?text=Halo Gais
 ```
 
 # Text3D 3
-```py
+```js
 api/text3d-3?text=Halo Gais
 ```
 
 # Text3D 4
-```py
+```js
 api/text3d-4?text=Halo Gais
 ```
